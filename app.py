@@ -5,7 +5,7 @@ from sqlalchemy.sql import func
 
 app=Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:postgres123@localhost/height_collector'
-app.config['SQLALCHEMY_DATABASE_URI']='postgres://wfwnmcmggwqwop:4421d4f92579a20a8cefd302d46267b8c80dc9a5a5f1d611f1a51d24bb888679@ec2-54-158-222-248.compute-1.amazonaws.com:5432/d1gndnjkso37ah'
+app.config['SQLALCHEMY_DATABASE_URI']='postgres://wfwnmcmggwqwop:4421d4f92579a20a8cefd302d46267b8c80dc9a5a5f1d611f1a51d24bb888679@ec2-54-158-222-248.compute-1.amazonaws.com:5432/d1gndnjkso37ah?sslmode=require'
 db=SQLAlchemy(app)
 
 class Data(db.Model):
